@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sonu Kumar | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- React & Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root"></div>
+
+<script type="text/babel">
+function App() {
+  React.useEffect(() => { AOS.init(); }, []);
+
+  return (
+    <>
+      <nav>
+        <h2>Sonu.</h2>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section className="hero">
+        <img src="profile.png" className="profile"/>
+        <h1>Sonu Kumar</h1>
+        <p>Final Year BTech CSE Student | Aspiring Software Engineer</p>
+        <a className="btn" href="resume.pdf" download>Download Resume</a>
+      </section>
+
+      <section id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+          Motivated and detail-oriented Computer Science student with a strong foundation in Python,
+          web development, and cybersecurity fundamentals. Passionate about clean and efficient code.
+        </p>
+      </section>
+
+      <section id="skills" data-aos="fade-up">
+        <h2>Skills</h2>
+        <div className="grid">
+          <span>Python</span><span>Java (Basics)</span><span>HTML</span><span>CSS</span>
+          <span>JavaScript</span><span>DBMS</span><span>Cybersecurity</span><span>Git</span>
+        </div>
+      </section>
+
+      <section id="projects" data-aos="fade-up">
+        <h2>Projects</h2>
+        <div className="card">
+          <h3>Student SGPA Calculator</h3>
+          <p>Python application to compute SGPA using marks and credits.</p>
+        </div>
+        <div className="card">
+          <h3>Honeypot Security System</h3>
+          <p>Detects and logs unauthorized access attempts.</p>
+        </div>
+        <div className="card">
+          <h3>Malware Detection System</h3>
+          <p>Academic prototype for identifying harmful files.</p>
+        </div>
+      </section>
+
+      <section id="contact" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p>Email: sonukumar.in9@gmail.com</p>
+        <p>LinkedIn: linkedin.com/in/sk2418</p>
+      </section>
+
+      <footer>© 2026 Sonu Kumar</footer>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
